@@ -1,3 +1,5 @@
+import about as about
+
 print("Welcome to Python Quiz Game Developed -- By Jay")
 
 # Topics
@@ -10,18 +12,21 @@ aboutWorldQ = ["Which one is the smallest ocean in the World?",
                "In which ocean 'Bermuda Triangle' region is located?", "Which country is known as playground of europe"]
 
 # Answers
-aboutWorldA = ["Central Arctic Ocean", "French People", "Israel and Jordan", "North Atlantic Ocean", "Switzerland"]
+aboutWorldA = ["central arctic Ocean", "france", "israel and jordan", "north atlantic ocean", "switzerland"]
 
 points = 0
 
 
 # Methods
 def answer(answers):
-    # lower = answers.lower()
-    if answers.lower() == "arctic ocean" or "central arctic ocean" or "france" or "french people" or "israel and jordan" or "switzerland":
+    if answers.lower() == aboutWorldA[0] or answers.lower() == aboutWorldA[1] or answers.lower() == aboutWorldA[2] or answers.lower() == aboutWorldA[3] or answers.lower() == aboutWorldA[4]:
         print("Correct")
+
     else:
         print("Wrong!")
+        global points
+        points = - 1
+
 
 
 play = input("\nDo you want to play? ")
@@ -33,27 +38,25 @@ if play == "Yes" or "yes":
     if select == "1":
         print("Questions ", topics[0])
 
-        for i in range(5):
-            que = input(f"\nQ-{i + 1}: {aboutWorldQ[i]}: ")
-            # answer(que)
-        print(points)
+        print(f"\nQ-1: {aboutWorldQ[0]}: ")
 
-        print("\nQ-1: ", aboutWorldQ[0])
         que1 = input()
-        answer("Arctic Ocean" or "Central Arctic Ocean" or "arctic ocean" or "central arctic ocean")
+        answer(que1)
 
         print("\nQ-2: ", aboutWorldQ[1])
         que2 = input()
-        answer("France" or "france" or "French People" or "french people")
+        answer(que2)
 
         print("\nQ-3: ", aboutWorldQ[2])
         que3 = input()
-        answer("Israel and Jordan", "israel and jordan")
+        answer(que3)
 
-        print("\nQ-3: ", aboutWorldQ[3])
+        print("\nQ-4: ", aboutWorldQ[3])
         que4 = input()
-        answer("north atlantic ocean", "North Atlantic Ocean")
+        answer(que4)
 
-        print("\nQ-3: ", aboutWorldQ[4])
+        print("\nQ-5: ", aboutWorldQ[4])
         que5 = input()
-        answer("switzerland", "Switzerland")
+        answer(que5)
+
+        print(f"\nAnswers: \nA-1: {aboutWorldA[0]}, A-2: {aboutWorldA[1]}, A-3: {aboutWorldA[2]}, A-4: {aboutWorldA[3]}, A-5: {aboutWorldA[4]}")
