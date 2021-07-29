@@ -1,2 +1,3 @@
 # Python-Mini-Projects
-- Here are 5 Python mini Projects
+- Here are my Python mini Projects
+- - Quiz Game 
