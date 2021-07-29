@@ -20,10 +20,6 @@ def answer(answers):
     # lower = answers.lower()
     if answers.lower() == "arctic ocean" or "central arctic ocean" or "france" or "french people" or "israel and jordan" or "switzerland":
         print("Correct")
-        global points
-        points = + 1
-        return points
-
     else:
         print("Wrong!")
 
@@ -39,25 +35,25 @@ if play == "Yes" or "yes":
 
         for i in range(5):
             que = input(f"\nQ-{i + 1}: {aboutWorldQ[i]}: ")
-            answer(que)
+            # answer(que)
         print(points)
 
-# print("\nQ-1: ", aboutWorldQ[0])
-# que1 = input()
-# answer("Arctic Ocean" or "Central Arctic Ocean" or "arctic ocean" or "central arctic ocean")
-#
-# print("\nQ-2: ", aboutWorldQ[1])
-# que2 = input()
-# answer("France" or "france" or "French People" or "french people")
-#
-# print("\nQ-3: ", aboutWorldQ[2])
-# que3 = input()
-# answer("Israel and Jordan", "israel and jordan")
-#
-# print("\nQ-3: ", aboutWorldQ[3])
-# que4 = input()
-# answer("north atlantic ocean", "North Atlantic Ocean")
-#
-# print("\nQ-3: ", aboutWorldQ[4])
-# que5 = input()
-# answer("switzerland", "Switzerland")
+        print("\nQ-1: ", aboutWorldQ[0])
+        que1 = input()
+        answer("Arctic Ocean" or "Central Arctic Ocean" or "arctic ocean" or "central arctic ocean")
+
+        print("\nQ-2: ", aboutWorldQ[1])
+        que2 = input()
+        answer("France" or "france" or "French People" or "french people")
+
+        print("\nQ-3: ", aboutWorldQ[2])
+        que3 = input()
+        answer("Israel and Jordan", "israel and jordan")
+
+        print("\nQ-3: ", aboutWorldQ[3])
+        que4 = input()
+        answer("north atlantic ocean", "North Atlantic Ocean")
+
+        print("\nQ-3: ", aboutWorldQ[4])
+        que5 = input()
+        answer("switzerland", "Switzerland")
