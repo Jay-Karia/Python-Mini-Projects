@@ -1,7 +1,7 @@
 print("Welcome to Python Quiz Game Developed -- By Jay")
 
 # Topics
-topics = ["About World", "Current Affairs", "Computer Science", "History", "About Novels"]
+topics = ["About World", "Current Affairs", "Computer Science"]
 
 # Questions
 aboutWorldQ = ["Which one is the smallest ocean in the World?",
@@ -59,8 +59,7 @@ def answer(answers):
 play = input("\nDo you want to play? ")
 
 if play.lower() == "yes":
-    select = input(
-        f"\nSelect a Topic: \n\n1) {topics[0]} \n2) {topics[1]} \n3) {topics[2]} \n4) {topics[3]} Computer Science" "\n5) About Novels\n")
+    select = input(f"\nSelect a Topic: \n\n1) {topics[0]} \n2) {topics[1]} \n3) {topics[2]}\n")
 
     if select == "1" or select.lower() == "about world":
         print("Questions ", topics[0])
