@@ -1,3 +1,5 @@
 # Python-Mini-Projects
-- Here are my Python mini Projects
-- - Quiz Game 
+- This is a Python Quiz Game with 3 Different Topics to choose from:
+- - About the World 
+- - Current Affairs 
+- - and Computer Science Questions
