@@ -25,7 +25,7 @@ computerScienceQ = ["Which are the common languages used in Web Development?",
 aboutWorldA = ["central arctic ocean", "france", "israel and jordan", "5", "switzerland"]
 currentAffairsA = ["ministry of road transport and highways", "flipkart", "bangalore international airport", "1875",
                    "myanmar"]
-computerScienceA = ["HTML, CSS and JavaScript", "LiveScript", "BufferedReader", "Data Science", "Kotlin"]
+computerScienceA = ["HTML, CSS and JavaScript", "Mocha", "BufferedReader", "Data Science", "Kotlin"]
 
 point = 0
 
@@ -35,25 +35,20 @@ def answer(answers):
     global point
     # if answers.lower() == aboutWorldA[0] or answers.lower() == aboutWorldA[1] or answers.lower() == aboutWorldA[2]
     # or answers.lower() == aboutWorldA[3] or answers.lower() == aboutWorldA[4]: print("Correct")
-    if answers.lower() == aboutWorldA[0] or answers.lower() == currentAffairsA[
-        0] or answers == "1" or answers.lower() == computerScienceA[0]:
+    if answers.lower() == aboutWorldA[0] or answers.lower() == currentAffairsA[0] or answers == "1" or answers.lower() == computerScienceA[0]:
         print("Correct!")
         point += 1
-    elif answers.lower() == aboutWorldA[1] or answers.lower() == currentAffairsA[
-        1] or answers == "2" or answers.lower() == computerScienceA[1]:
+    elif answers.lower() == aboutWorldA[1] or answers.lower() == currentAffairsA[1] or answers == "2" or answers.lower() == computerScienceA[1]:
         print("Correct!")
         point = point + 1
-    elif answers.lower() == aboutWorldA[
-        2] or answers.lower() == "israel, jordan" or answers.lower() == "israel jordan" or answers.lower() == \
+    elif answers.lower() == aboutWorldA[2] or answers.lower() == "israel, jordan" or answers.lower() == "israel jordan" or answers.lower() == \
             currentAffairsA[2] or answers == "3" or answers.lower() == computerScienceA[2]:
         print("Correct!")
         point = point + 1
-    elif answers.lower() == aboutWorldA[3] or answers.lower() == currentAffairsA[
-        3] or answers == "4" or answers.lower() == computerScienceA[3]:
+    elif answers.lower() == aboutWorldA[3] or answers.lower() == currentAffairsA[3] or answers == "4" or answers.lower() == computerScienceA[3]:
         print("Correct!")
         point = point + 1
-    elif answers.lower() == aboutWorldA[4] or answers.lower() == currentAffairsA[
-        4] or answers == "5" or answers.lower() == computerScienceA[4]:
+    elif answers.lower() == aboutWorldA[4] or answers.lower() == currentAffairsA[4] or answers == "5" or answers.lower() == computerScienceA[4]:
         print("Correct!")
         point = point + 1
     else:
@@ -96,7 +91,7 @@ if play.lower() == "yes":
         answer(ans5)
 
         print(
-            f"\nAnswers: \nA-1: {aboutWorldA[0]}, A-2: {aboutWorldA[1]}, A-3: {aboutWorldA[2]}, A-4: {aboutWorldA[3]}, A-5: {aboutWorldA[4]}")
+            f"\nAnswers: \nA-1: {aboutWorldA[0]}, \nA-2: {aboutWorldA[1]}, \nA-3: {aboutWorldA[2]}, \nA-4: {aboutWorldA[3]}, \nA-5: {aboutWorldA[4]}")
     elif select == "2" or select.lower() == "current affairs":
         print("Questions ", topics[1])
 
@@ -139,7 +134,7 @@ if play.lower() == "yes":
         answer(ans1)
 
         print("\nQ-2: ", computerScienceQ[1])
-        print("1) TypeScript\n2) EcmaScript\n3) LiveScript\n4) ESScript\n5) Ecma")
+        print("1) TypeScript\n2) EcmaScript\n3) LiveScript\n4) Mocha\n5) Ecma")
         ans2 = input()
         answer(ans2)
 
@@ -160,7 +155,7 @@ if play.lower() == "yes":
         answer(ans5)
 
         print(
-            f"\nAnswers: \nA-1: {computerScienceA[0]}, A-2: {computerScienceA[1]}, A-3: {computerScienceA[2]}, A-4: {computerScienceA[3]}, A-5: {computerScienceA[4]}")
+            f"\nAnswers: \nA-1: {computerScienceA[0]},\nA-2: {computerScienceA[1]}, \nA-3: {computerScienceA[2]}, \nA-4: {computerScienceA[3]}, \nA-5: {computerScienceA[4]}")
 
     print(f"\nYou scored {str(point)} / 5!")
     print(f"Your Percentage: {(point * 100) / 5}")
