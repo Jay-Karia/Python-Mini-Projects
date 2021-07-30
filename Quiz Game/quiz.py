@@ -9,11 +9,23 @@ aboutWorldQ = ["Which one is the smallest ocean in the World?",
                "Dead Sea is located between which two countries?",
                "Total number of oceans in the World is", "Which country is known as playground of europe"]
 
-currentAffairsQ = ["Which Union Ministry has notified the standards for Safety Evaluation of Hydrogen Fuels?", "Which E-commerce platform launched a Start-up promotion and mentoring programme named ‘Leap’?", "Which Indian airport has partnered with Virgin Hyperloop for Hyperloop corridor?", "When was the Indian Meteorological Department established?", "India has provided around 3000 vials of Remdisvir to which country?"]
+currentAffairsQ = ["Which Union Ministry has notified the standards for Safety Evaluation of Hydrogen Fuels?",
+                   "Which E-commerce platform launched a Start-up promotion and mentoring programme named ‘Leap’?",
+                   "Which Indian airport has partnered with Virgin Hyperloop for Hyperloop corridor?",
+                   "When was the Indian Meteorological Department established?",
+                   "India has provided around 3000 vials of Remdisvir to which country?"]
+
+computerScienceQ = ["Which are the common languages used in Web Development?",
+                    "What was the first name given to \"JavaScript\" when it was developed?",
+                    "Which of the following Java Classes belongs to \"io\" package?",
+                    "Where is Python Programming Language used?",
+                    "Which is the modern language used in Android Development"]
 
 # Answers
 aboutWorldA = ["central arctic ocean", "france", "israel and jordan", "5", "switzerland"]
-currentAffairsA = ["ministry of road transport and highways", "flipkart", "bangalore international airport", "1875", "myanmar"]
+currentAffairsA = ["ministry of road transport and highways", "flipkart", "bangalore international airport", "1875",
+                   "myanmar"]
+computerScienceA = ["HTML, CSS and JavaScript", "LiveScript", "BufferedReader", "Data Science", "Kotlin"]
 
 point = 0
 
@@ -23,19 +35,25 @@ def answer(answers):
     global point
     # if answers.lower() == aboutWorldA[0] or answers.lower() == aboutWorldA[1] or answers.lower() == aboutWorldA[2]
     # or answers.lower() == aboutWorldA[3] or answers.lower() == aboutWorldA[4]: print("Correct")
-    if answers.lower() == aboutWorldA[0] or answers.lower() == currentAffairsA[0] or answers == "1":
+    if answers.lower() == aboutWorldA[0] or answers.lower() == currentAffairsA[
+        0] or answers == "1" or answers.lower() == computerScienceA[0]:
         print("Correct!")
         point += 1
-    elif answers.lower() == aboutWorldA[1] or answers.lower() == currentAffairsA[1] or answers == "2":
+    elif answers.lower() == aboutWorldA[1] or answers.lower() == currentAffairsA[
+        1] or answers == "2" or answers.lower() == computerScienceA[1]:
         print("Correct!")
         point = point + 1
-    elif answers.lower() == aboutWorldA[2] or answers.lower() == "israel, jordan" or answers.lower() == "israel jordan" or answers.lower() == currentAffairsA[2] or answers == "3":
+    elif answers.lower() == aboutWorldA[
+        2] or answers.lower() == "israel, jordan" or answers.lower() == "israel jordan" or answers.lower() == \
+            currentAffairsA[2] or answers == "3" or answers.lower() == computerScienceA[2]:
         print("Correct!")
         point = point + 1
-    elif answers.lower() == aboutWorldA[3] or answers.lower() == currentAffairsA[3] or answers == "4":
+    elif answers.lower() == aboutWorldA[3] or answers.lower() == currentAffairsA[
+        3] or answers == "4" or answers.lower() == computerScienceA[3]:
         print("Correct!")
         point = point + 1
-    elif answers.lower() == aboutWorldA[4] or answers.lower() == currentAffairsA[4] or answers == "5":
+    elif answers.lower() == aboutWorldA[4] or answers.lower() == currentAffairsA[
+        4] or answers == "5" or answers.lower() == computerScienceA[4]:
         print("Correct!")
         point = point + 1
     else:
@@ -49,7 +67,7 @@ if play.lower() == "yes":
     select = input(
         f"\nSelect a Topic: \n\n1) {topics[0]} \n2) {topics[1]} \n3) {topics[2]} \n4) {topics[3]} Computer Science" "\n5) About Novels\n")
 
-    if select == "1":
+    if select == "1" or select.lower() == "about world":
         print("Questions ", topics[0])
 
         print(f"\nQ-1: {aboutWorldQ[0]}")
@@ -79,11 +97,12 @@ if play.lower() == "yes":
 
         print(
             f"\nAnswers: \nA-1: {aboutWorldA[0]}, A-2: {aboutWorldA[1]}, A-3: {aboutWorldA[2]}, A-4: {aboutWorldA[3]}, A-5: {aboutWorldA[4]}")
-    elif select == "2":
+    elif select == "2" or select.lower() == "current affairs":
         print("Questions ", topics[1])
 
         print(f"\nQ-1: {currentAffairsQ[0]}")
-        print("1) Ministry of Road Transport and Highways\n2) Ministry of Power\n3) Ministry of MSME\n4) state ministry\n5) ] Ministry of Renewable Energy")
+        print(
+            "1) Ministry of Road Transport and Highways\n2) Ministry of Power\n3) Ministry of MSME\n4) state ministry\n5) ] Ministry of Renewable Energy")
         ans1 = input()
         answer(ans1)
 
@@ -93,7 +112,8 @@ if play.lower() == "yes":
         answer(ans2)
 
         print("\nQ-3: ", currentAffairsQ[2])
-        print("1) Delhi International Airport\n2) Bangalore International Airport\n3) Cochin International Airport\n4) Mumbai International Airport\n5) Ahmedabad International Airport")
+        print(
+            "1) Delhi International Airport\n2) Bangalore International Airport\n3) Cochin International Airport\n4) Mumbai International Airport\n5) Ahmedabad International Airport")
         ans3 = input()
         answer(ans3)
 
@@ -109,7 +129,40 @@ if play.lower() == "yes":
 
         print(
             f"\nAnswers: \nA-1: {currentAffairsA[0]}, A-2: {currentAffairsA[1]}, A-3: {currentAffairsA[2]}, A-4: {currentAffairsA[3]}, A-5: {currentAffairsA[4]}")
-    print(f"\nYou scored {str(point)}!")
+    elif select == "3" or select.lower() == "computer science":
+        print("Questions ", topics[2])
+
+        print(f"\nQ-1: {computerScienceQ[0]}")
+        print(
+            "1) HTML, CSS, Javascript\n2) C\C++\n3) Turbo C++\n4) Only JavaScript\n5) HTML and CSS")
+        ans1 = input()
+        answer(ans1)
+
+        print("\nQ-2: ", computerScienceQ[1])
+        print("1) TypeScript\n2) EcmaScript\n3) LiveScript\n4) ESScript\n5) Ecma")
+        ans2 = input()
+        answer(ans2)
+
+        print("\nQ-3: ", computerScienceQ[2])
+        print(
+            "1) Scanner\n2) String\n3) InetAddress\n4) Component\n5) BufferedReader")
+        ans3 = input()
+        answer(ans3)
+
+        print("\nQ-4: ", computerScienceQ[3])
+        print("1) Web Development\n2) Data Science\n3) Android Development\n4) Server-Side Development\n5) Front-End Development")
+        ans4 = input()
+        answer(ans4)
+
+        print("\nQ-5: ", computerScienceQ[4])
+        print("1) Python\n2) Java\n3) C#\n4) C\n5) Kotlin")
+        ans5 = input()
+        answer(ans5)
+
+        print(
+            f"\nAnswers: \nA-1: {computerScienceA[0]}, A-2: {computerScienceA[1]}, A-3: {computerScienceA[2]}, A-4: {computerScienceA[3]}, A-5: {computerScienceA[4]}")
+
+    print(f"\nYou scored {str(point)} / 5!")
     print(f"Your Percentage: {(point * 100) / 5}")
 else:
     quit()
